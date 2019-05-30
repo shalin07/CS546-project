@@ -1,0 +1,67 @@
+
+<header>
+    <a href="/users/logout">Sign Out</a>
+</header>
+
+<main>
+    <section>
+        <h1>{{foundName}}</h1>
+        {{#with details}}
+            <dl>
+                <dt>Name</dt>
+                <dd>{{name}}</dd>
+                <dt>Location</dt>
+                <dd>{{location}}</dd>
+                <dt>Style</dt>
+                <dd>{{style}}</dd>
+                <dt>Description</dt>
+                <dd>{{description}}</dd>
+                <dt>Rating</dt>
+                <dd>{{rating}}</dd>
+                <dt>Reviews</dt>
+                <dd>   
+                    <ul>
+                        {{#each reviews}}
+                            <li>
+                                <p>Rating: {{rating}}</p>
+                                <p>Review: {{review}}</p>
+                            </li>
+                        {{/each}}
+                    </ul> 
+                </dd>            
+            </dl> 
+        {{/with}}
+    </section>
+    
+    <section>
+        <h2>Write your review here:</h2>
+        <form method="post" id="review-form" data-venueId={{venueID}} data-userId = {{userId}} action="/venues/{{userId}}/{{venueID}}/reviewadded">
+            <label for="rating">Rating</label>
+            <select name="rating" id="rating" required>
+                <option value="" selected disabled hidden>Choose here</option>
+                <option value="1">Horrible</option>
+                <option value="2">Poor</option>
+                <option value="3">Average</option>
+                <option value="4">Good</option>
+                <option value="5">Awesome</option>
+            </select>
+            <label for="content">Review</label>
+            <input type="text" name="content" id="content" placeholder="Add your review here">
+            <button type="submit" id="submitreview">Submit Review</button>
+        </form>
+
+        <div id="message-container"></div>
+    </section>    
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="/public/frontendJS/review.js"></script>
+            
+</main>
+
+<footer>
+    <a href="/{{userId}}/home">Make another Search</a>
+</footer>
+    
+    
+

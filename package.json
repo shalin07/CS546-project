@@ -1,0 +1,26 @@
+{
+  "name": "groupproject",
+  "version": "1.0.0",
+  "description": "\u0016The Web application proposed here is a website that allows users to search for restaurant venues, view data and visualizations of results, and submit reviews.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node ./tasks/seed.js"
+  },
+  "author": "Brian Hartigan 10421547",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.6",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.0",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.1",
+    "html": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.2.5",
+    "path": "^0.12.7",
+    "xss": "^1.0.6"
+  }
+}

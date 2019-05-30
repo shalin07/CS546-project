@@ -1,0 +1,2 @@
+Which layer should validation checks occur? 
+	e.g. Lecture 6 data modules (like posts) do not contain try catch blocks or validation checks. 

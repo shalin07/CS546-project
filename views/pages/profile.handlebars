@@ -1,0 +1,43 @@
+
+<header>
+    <a href="/{{userId}}/home">Home</a>
+    <a href="/users/logout">Sign Out</a>
+</header>
+       
+<main>
+    <section>
+        <h1>Your User Profile</h1>
+        {{!-- <h1>{{foundName}}</h1> --}}
+        {{#with profile}}
+            <dl>
+                <dt>firstName</dt>
+                <dd>{{firstName}}</dd>
+                <dt>lastname</dt>
+                <dd>{{lastname}}</dd>
+                <dt>Age</dt>
+                <dd>{{age}}</dd>
+                <dt>Email</dt>
+                <dd>{{email}}</dd>
+                <dt>B'day</dt>
+                <dd>{{bday}}</dd>
+            </dl> 
+        {{/with}}
+    </section>
+    
+    <section>
+        <h2>Enjoy!</h2>
+        <div id="message-container"></div>
+    </section>    
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    {{!-- <script src="/public/frontendJS/review.js"></script> --}}
+            
+</main>
+
+<footer>
+    <a href="/{{userId}}/home">Make another Search</a>
+</footer>
+    
+    
+

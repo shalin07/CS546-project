@@ -1,0 +1,10 @@
+
+<section>
+    <h1>Invalid Search Criteria</h1>
+    {{#if searchTerm}}
+        <p class=error>{{searchTerm}} is not a valid id.</p>
+    {{else}}
+        <p class=error>Are you positive you entered a search term? Please go back and try again</p>
+    {{/if}} 
+        <p class=errorText>{{error}}</p>
+</section>

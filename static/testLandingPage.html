@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Test Landing Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/site.css">
+
+</head>
+
+<body>
+    <main>
+        <h1>Test Landing Page</h1>
+        <article>
+            <header>
+                <h2>Welcome to the Test Landing Page</h2>
+            </header>
+            <p>Main Landing Page for The DOT COM Bubbles' Team Project and for testing routes and their corresponding database calls 
+            </p>
+
+            <!--Form for adding a new venue-->
+            <section class="addVenue">
+                <h3>Add Venue Below</h3>
+                <form action="/venues/create" method="POST" class="new-input-form">
+                    <label for="venueName">
+                        Venue Name:
+                        <input id="venueName" name="name" type="text">
+                    </label>
+                    <label for=venueDescription>
+                        Venue Description:
+                        <input id="venueDescription" name="description" type="text" class=largeTextBody>
+                    </label>
+                    <label for=venueStyle>
+                        Venue Style: 
+                        <input id="venueStyle" name="style" type="text">
+                    </label>
+                    <label for=venueLocation>
+                        Venue Location: 
+                        <input id="venueLocation" name="location" type="text">
+                    </label> 
+                    <button type="submit">Submit</button>            
+                </form>
+            </section>
+
+            <!--Form for adding a new user-->
+            <section class="addUser">
+                <h3>Add User Below</h3>
+                <form action="/users/create" method="POST" class="new-input-form">
+                    <label for="userName">
+                        User Name:
+                        <input id="userName" name="name" type="text">
+                    </label>
+                    <label for="userPassword">
+                        User Password:
+                        <input id="userPassword" name="password" type="password">
+                    </label>
+                    <button type="submit">Submit</button>            
+                </form>
+            </section>
+
+            <!--Form to search for a user-->
+            <section class="findUser">
+                <h3>Conduct a User Search Below</h3>
+                <form action="/users" method="POST" class="new-search-form">
+                    <label for="userIdSearch">
+                        Find User By Id:
+                        <input id="userIdSearch" name="userIdSearch" type="text">
+                    </label> 
+                    <button type="submit">Submit</button>            
+                </form>
+
+                <!--Form to return all venues-->
+                <form action="/users" method="GET" class="new-search-form">
+                    <label for="getAllUsers">
+                        View all Users:
+                        <button id="getAllUsers" type="submit">Submit</button> 
+                    </label>            
+                </form>
+            </section>
+
+
+
+            <!--Form to search for a venue by name-->
+            <section class="findVenue">
+                <h3>Conduct a Venue Search Below</h3>
+                <form action="/venues" method="POST" class="new-search-form">
+                    <label for="venueNameSearch">
+                        Find Venue By Name:
+                        <input id="venueNameSearch" name="venueNameSearch" type="text">
+                    </label> 
+                    <button type="submit">Submit</button>            
+                </form>
+
+                <!--Form to return all venues-->
+                <form action="/venues" method="GET" class="new-search-form">
+                    <label for="getAllVenues">
+                        View all Venues:
+                        <!--input id="getAllVenues" name="getAllVenues" type="submit"-->
+                        <button id="getAllVenues" type="submit">Submit</button> 
+                    </label>            
+                </form>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+	<div>
+		<a href="/aboutus">About Us</a>
+	</div>
+	{{#if success_messages }}
+	<div class="alert alert-success">{{success_messages}}</div>
+	{{/if}}
+	{{#if error_messages }}
+	<div class="alert alert-danger">{{error_messages}}</div>
+	{{/if}}
+	<h1>f<span>oo</span>d c<span>o</span>urt R<span>e</span>g<span>is</span>t<span>ra</span>ti<span>on</span> f<span>o</span>rm</h1>
+	<div class="wthree-form">
+			<h2>Fill out the form below to register</h2>
+		<div class="w3l-login form">
+			<form action="/users/registration" method="post">
+				<div class="form-sub-w3">
+					<input type="text" name="fname" id="fname" placeholder="FirstName" required="" size="50" style="height: 30px;"/>
+				</div>
+				<div class="form-sub-w3">
+					<input type="text" name="lname" id="lname" placeholder="LastName" required="" size="50" style="height: 30px;"/>
+				</div>
+				<div class="form-sub-w3">
+					<input type="email" name="email" id="email" placeholder="Email" required="" size="50" style="height: 30px;"/>
+				</div>
+				<div class="form-sub-w3">
+					<input type="text" name="phone" id="phone" placeholder="PhoneNumber" required="" size="50" style="height: 30px;"/>
+				</div>
+				<div class="form-sub-w3">
+					<input type="number" name="age" id="age" placeholder="Age" required=""/>
+				</div>
+				{{!-- <br> --}}
+                <div class="form-sub-w3">
+					<input type="date" name="bday" id="bday"  required=""  style="font-size: 0.8rem"/>
+				</div>	
+				<div class="form-sub-w3">
+					<input type="password" name="password" id="password" placeholder="Password" required="" size="50" style="height: 30px;"/>
+				</div>
+				<div class="form-sub-w3">
+					<input type="password" name="confirm" id="comfirm" placeholder="Enter Password again" required="" size="50" style="height: 30px;"/>
+				</div>
+				<div class="submit-agileits">
+					<input type="submit" value="Register">
+				</div>
+                <br>
+				<div>
+					<a href="/users/logon"> Already Have an account?</a>
+				</div>
+			 </form>
+		</div>
+	</div>
